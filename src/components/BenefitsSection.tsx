@@ -2,6 +2,12 @@
 // src/components/BenefitsSection.tsx
 import React from 'react';
 import BenefitCard from './BenefitCard';
+import { motion } from 'framer-motion';
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 const benefits = [
   {
@@ -29,18 +35,27 @@ const benefits = [
 
 const BenefitsSection: React.FC = () => {
   return (
-    <section className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <motion.section
+      className="min-h-screen py-16 mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+    >
       {benefits.map(({ id, title, icon, description, ctaText }) => (
-        <BenefitCard
+        <motion.div
           key={id}
-          title={title}
-          icon={icon}
-          description={description}
-          ctaText={ctaText}
-          onClick={() => alert(`Clicked ${title}`)}
-        />
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <BenefitCard
+            title={title}
+            icon={icon}
+            description={description}
+            ctaText={ctaText}
+            onClick={() => alert(`Clicked ${title}`)}
+          />
+        </motion.div>
       ))}
-    </section>
+    </motion.section>
   );
 };
 
