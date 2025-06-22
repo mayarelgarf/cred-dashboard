@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@custom-variant dark (&:where(.dark, .dark *));
+
 
 @theme inline {
   --color-background: var(--background);
@@ -118,4 +118,11 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Override for the profile avatar image in ProfileSummary */
+.profile-avatar-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }

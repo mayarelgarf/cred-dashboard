@@ -28,7 +28,7 @@ const ProfileSummary: React.FC<ProfileSummaryProps> = ({
           src={avatarUrl}
           alt={`${name} avatar`}
           fill
-          className="object-cover"
+          className="object-cover profile-avatar-img"
         />
       </div>
       <div className="ml-4 flex-1">

@@ -1,12 +1,14 @@
 import BenefitsSection from "@/components/BenefitsSection";
+import { ModeToggle } from "@/components/mode-toggle";
 import ProfileSummary from "@/components/ProfileSummary";
 import RewardRadialChart from "@/components/RewardChart";
 
 export default function Home() {
   return (
-    <div>
+    <main>
+      <ModeToggle></ModeToggle>
       {/* Hero/Profile Section */}
-      <section className="min-h-screen flex items-center justify-center bg-black">
+      <section className="min-h-screen flex items-center justify-center ">
         <ProfileSummary
           name="John Doe"
           level={5}
@@ -16,12 +18,12 @@ export default function Home() {
       </section>
 
       {/* Scroll Indicator */}
-      <div className="flex justify-center -mt-8 mb-8">
-        <span className="animate-bounce text-3xl text-white">↓</span>
+      <div className="flex justify-center  mb-8 ">
+        <span className="animate-bounce text-3xl ">↓</span>
       </div>
 
       {/* Reward Chart Section */}
-      <section className="flex flex-col items-center justify-center py-20 bg-gradient-to-b from-black to-zinc-900">
+      <section className="flex flex-col items-center justify-center py-20 bg-gradient-to-b">
         <div className="w-full max-w-md">
           <RewardRadialChart points={350} maxPoints={500} />
         </div>
@@ -33,6 +35,6 @@ export default function Home() {
         <h1 className="text-2xl font-bold mb-4 text-white">Your Benefits</h1>
         <BenefitsSection />
       </section>
-    </div>
+    </main>
   );
 }

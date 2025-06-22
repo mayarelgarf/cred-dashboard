@@ -1,5 +1,4 @@
 'use client';
-// src/components/BenefitsSection.tsx
 import React from 'react';
 import BenefitCard from './BenefitCard';
 import { motion } from 'framer-motion';
