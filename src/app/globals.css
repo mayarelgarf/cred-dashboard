@@ -115,6 +115,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html, body {
+    font-family: var(--font-geist-sans), sans-serif;
+  }
   body {
     @apply bg-background text-foreground;
   }

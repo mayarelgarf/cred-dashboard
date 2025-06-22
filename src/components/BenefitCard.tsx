@@ -19,14 +19,20 @@ const BenefitCard: React.FC<BenefitCardProps> = ({ title, icon, description, cta
       variants={cardVariants}
       whileHover={{ scale: 1.04, boxShadow: '0 8px 32px rgba(80,80,200,0.15)' }}
       whileTap={{ scale: 0.98 }}
-      className="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 flex flex-col justify-between cursor-pointer transition-all"
+      className="relative flex flex-col items-center p-10 bg-gradient-to-br from-[#2e026d] via-[#15162c] to-[#0f172a] shadow-2xl rounded-3xl w-full border-2 border-purple-700/60 backdrop-blur-md transition-all cursor-pointer"
     >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold mb-2 text-zinc-900 dark:text-white">{title}</h3>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4 flex-grow">{description}</p>
+      <div className="text-5xl mb-4 drop-shadow-[0_0_24px_rgba(139,92,246,0.7)] text-purple-300 flex items-center justify-center">
+        {icon}
+      </div>
+      <h3 className="text-2xl font-extrabold text-white tracking-wide drop-shadow-lg mb-2 text-center">
+        {title}
+      </h3>
+      <p className="text-zinc-300/80 mb-6 text-center font-mono tracking-wider flex-grow">
+        {description}
+      </p>
       <button
         onClick={onClick}
-        className="mt-auto px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+        className="mt-auto px-6 py-2 bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 text-white font-bold rounded-full shadow-lg hover:from-purple-600 hover:to-indigo-600 transition uppercase tracking-wider"
       >
         {ctaText}
       </button>

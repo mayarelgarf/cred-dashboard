@@ -35,8 +35,13 @@ const benefits = [
 const BenefitsSection: React.FC = () => {
   return (
     <motion.section
-      className="min-h-screen py-16 mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+      className="relative min-h-screen py-16 mt-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 bg-gradient-to-br from-[#2e026d] via-[#15162c] to-[#0f172a] shadow-2xl rounded-3xl w-full border-2 border-purple-700/60 backdrop-blur-md"
     >
+      <div className="col-span-full mb-8 flex flex-col items-center">
+        <h1 className="text-4xl font-extrabold text-white tracking-wide drop-shadow-lg mb-2 text-center">
+          Your Benefits
+        </h1>
+      </div>
       {benefits.map(({ id, title, icon, description, ctaText }) => (
         <motion.div
           key={id}

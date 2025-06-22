@@ -5,8 +5,13 @@ import RewardRadialChart from "@/components/RewardChart";
 
 export default function Home() {
   return (
-    <main>
-      <ModeToggle></ModeToggle>
+    <main className="pt-[112px]">
+      <header className="fixed top-0 left-0 w-full z-50 h-[100px] bg-gradient-to-r from-purple-800 via-indigo-900 to-gray-900 flex items-center justify-between px-10 shadow-xl border-b border-purple-700/40">
+        <h1 className="text-2xl font-extrabold text-white tracking-wide drop-shadow-lg">
+          Gaming Dashboard
+        </h1>
+        <ModeToggle />
+      </header>
       {/* Hero/Profile Section */}
       <section className="min-h-screen flex items-center justify-center ">
         <ProfileSummary
@@ -29,10 +34,8 @@ export default function Home() {
         </div>
       </section>
 
-  
       {/* Benefits Section */}
       <section className="p-6">
-        <h1 className="text-2xl font-bold mb-4 text-white">Your Benefits</h1>
         <BenefitsSection />
       </section>
     </main>
