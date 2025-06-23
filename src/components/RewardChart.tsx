@@ -8,6 +8,7 @@ import {
 import { motion, animate, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 import React from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface RewardRadialChartProps {
   points: number;
@@ -85,5 +86,18 @@ const RewardRadialChart: React.FC<RewardRadialChartProps> = ({
     </motion.div>
   );
 };
+
+// Skeleton for loading state
+export const RewardRadialChartSkeleton: React.FC = () => (
+  <div className="relative flex flex-col items-center p-10 bg-gradient-to-br from-[#2e026d] via-[#15162c] to-[#0f172a] shadow-2xl rounded-3xl w-full max-w-2xl border-2 border-purple-700/60 backdrop-blur-md">
+    <Skeleton className="h-10 w-1/2 rounded mb-6" />
+    <div className="h-48 w-full flex items-center justify-center">
+      <div className="rounded-full bg-zinc-800 w-40 h-40 flex items-center justify-center">
+        <Skeleton className="w-16 h-6 rounded" />
+      </div>
+    </div>
+    <Skeleton className="mt-6 h-6 w-1/3 rounded" />
+  </div>
+);
 
 export default RewardRadialChart;
