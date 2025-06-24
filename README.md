@@ -88,7 +88,7 @@ A modern, responsive web dashboard inspired by CRED Garage, built with Next.js, 
 
 ## 🌐 Live Demo
 
-> _Deployed on Vercel: [your-vercel-link](https://your-vercel-link.vercel.app)_
+> _Deployed on Vercel: https://cred-dashboard-sigma.vercel.app/
 
 ---
 
