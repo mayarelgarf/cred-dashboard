@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CRED Garage Inspired Dashboard
 
-## Getting Started
+A modern, responsive web dashboard inspired by CRED Garage, built with Next.js, TailwindCSS, and Framer Motion. This project demonstrates best-in-class UI/UX, smooth animations, and attention to detail, reflecting real-world frontend engineering standards.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework:** [Next.js](https://nextjs.org/) (React 19)
+- **Styling:** [TailwindCSS](https://tailwindcss.com/)
+- **UI Components:** Custom, with [Radix UI](https://www.radix-ui.com/) primitives
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Charts:** [Recharts](https://recharts.org/) (for reward points)
+- **Theme Management:** [next-themes](https://github.com/pacocoursey/next-themes)
+- **Mock API:** [MSW (Mock Service Worker)](https://mswjs.io/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features Overview
 
-## Learn More
+### 👤 User Profile Summary
+- Avatar, name, level badge, and animated XP progress bar.
+- Smooth entrance and progress animations.
 
-To learn more about Next.js, take a look at the following resources:
+### 🎁 Benefits Section (Card Tile Layout)
+- Responsive grid of benefit cards (discounts, offers, vouchers).
+- Each card includes an icon, title, description, and CTA button.
+- Animated card transitions and hover effects.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 💎 Reward Points Progress
+- Radial bar chart visualizing reward points using Recharts.
+- Animated count-up and progress transitions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🌓 Dark/Light Mode Toggle
+- Persistent theme toggle (light, dark, system) using next-themes.
+- Accessible and visually appealing toggle UI.
 
-## Deploy on Vercel
+### ⏳ Loading Skeletons & Transitions
+- Skeleton components for all major sections during data loading.
+- Smooth fade-in and layout transitions.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 💫 Smooth Animations
+- Framer Motion powers all layout, entrance, and hover animations.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🏗️ Bonus Implementations
+
+- **Mock API Layer:** All data (e.g., benefits) is served via MSW for realistic loading and testing.
+- **Chart Library:** Reward points use a radial chart for engaging data visualization.
+- **Componentized Skeletons:** Each major section has a dedicated skeleton for loading states.
+- **Mobile-First Responsive Design:** Fully responsive, works seamlessly on all devices.
+
+---
+
+## 📸 Screenshots
+
+> _Add screenshots or a Loom walkthrough here for extra clarity and impact!_
+
+---
+
+## 🛠️ Setup Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd cred-dashboard
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open [http://localhost:3000](http://localhost:3000) in your browser.**
+
+---
+
+## 🌐 Live Demo
+
+> _Deployed on Vercel: [your-vercel-link](https://your-vercel-link.vercel.app)_
+
+---
+
+## 📁 Project Structure
+
+- `src/components/` – All UI components (ProfileSummary, BenefitsSection, RewardChart, etc.)
+- `src/components/ui/` – Reusable UI primitives (Button, Dropdown, Skeleton)
+- `src/mocks/` – Mock API handlers (MSW)
+- `src/lib/` – Utility functions
+- `src/app/` – Next.js app directory (pages, layout, global styles)
+
+---
+
+
