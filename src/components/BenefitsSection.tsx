@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BenefitCard from './BenefitCard';
 import { motion } from 'framer-motion';
 import { Skeleton } from "@/components/ui/skeleton";
@@ -9,31 +9,21 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-const benefits = [
-  {
-    id: 1,
-    title: "10% Discount",
-    icon: "💸",
-    description: "Get 10% off on your next purchase",
-    ctaText: "Claim",
-  },
-  {
-    id: 2,
-    title: "Free Voucher",
-    icon: "🎟️",
-    description: "Grab your free voucher for select brands",
-    ctaText: "View",
-  },
-  {
-    id: 3,
-    title: "Exclusive Offer",
-    icon: "🔥",
-    description: "Access limited time exclusive offers",
-    ctaText: "Claim",
-  },
-];
-
 const BenefitsSection: React.FC = () => {
+  const [benefits, setBenefits] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/benefits')
+      .then(res => res.json())
+      .then(data => {
+        setBenefits(data.benefits);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <BenefitsSectionSkeleton />;
+
   return (
     <motion.section
       className="relative min-h-screen py-16 mt-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 bg-gradient-to-br from-[#2e026d] via-[#15162c] to-[#0f172a] shadow-2xl rounded-3xl w-full border-2 border-purple-700/60 backdrop-blur-md"
