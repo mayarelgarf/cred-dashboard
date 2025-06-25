@@ -31,7 +31,7 @@ export default function Home() {
             name="John Doe"
             level={5}
             xpPercentage={70}
-            avatarUrl="https://i.pravatar.cc/100"
+            avatarUrl="https://avatars.githubusercontent.com/u/9919?v=4"
           />
         )}
       </section>
